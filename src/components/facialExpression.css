@@ -1,0 +1,174 @@
+/* ---------- Page container ---------- */
+.mood-container {
+  min-height: 100vh;
+  background: #f7f7fb; /* light background similar to your reference */
+  color: #111827;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  transition: background 0.25s, color 0.25s;
+}
+.mood-container.dark {
+  background: #000;
+  color: #39ff14; /* (if you enable dark mode) */
+}
+
+/* ---------- Header ---------- */
+.mood-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.brand-title {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+  font-weight: 700;
+}
+.brand-sub {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Toggle */
+.toggle-btn {
+  background: #6d28d9;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.toggle-btn:hover { opacity: .95; }
+
+/* ---------- Main container centered like reference ---------- */
+.mood-main {
+  width: 100%;
+  max-width: 1000px; /* same content width as your reference */
+  margin: 28px auto 0; /* center horizontally and leave small top gap */
+  padding: 20px 20px 12px;
+}
+.main-heading {
+  font-size: 28px;
+  margin: 0 0 18px;
+  color: #111827;
+  font-weight: 800;
+}
+
+/* ---------- Detector row: video left, controls right ---------- */
+.mood-section {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Video card (large) */
+.mood-video {
+  width: 360px;
+  height: 480px;
+  background: #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+.mood-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info / button column on the right */
+.mood-info {
+  width: calc(100% - 360px);
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.info-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Detect button (gradient) */
+.detect-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #6ee7b7, #3b82f6, #9333ea);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(147, 51, 234, 0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.detect-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 30px rgba(147,51,234,0.22); }
+
+/* ---------- Search row under detector ---------- */
+.search-row {
+  margin-top: 22px;
+}
+.search-input {
+  width: 100%;
+  max-width: 560px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e9;
+  background: #fff;
+  color: #111827;
+  font-size: 14px;
+}
+
+/* Dark mode small adjustments (if you use dark toggle) */
+.mood-container.dark .search-input {
+  background: #000;
+  color: #39ff14;
+  border: 1px solid rgba(57,255,20,0.5);
+}
+/* Neon glow effect for dark mode headings */
+.mood-container.dark .brand-title,
+.mood-container.dark .main-heading {
+  color: #39ff14; /* neon green base */
+  text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 24px #39ff14;
+  position: relative;
+  animation: glow-move 3s infinite linear;
+}
+
+/* Keyframes for moving light effect */
+@keyframes glow-move {
+  0% {
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 24px #39ff14;
+  }
+  25% {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #39ff14, 0 0 30px #00ffff;
+  }
+  50% {
+    text-shadow: 0 0 12px #ff00ff, 0 0 24px #ff00ff, 0 0 36px #39ff14;
+  }
+  75% {
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14, 0 0 24px #39ff14;
+  }
+}

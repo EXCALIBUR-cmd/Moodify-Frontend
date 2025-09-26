@@ -1,0 +1,127 @@
+/* container stretches same centered width as detector */
+.mood-songs {
+  width: 100%;
+  max-width: 1000px;   /* same max-width as detector */
+  margin: 18px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* heading */
+.songs-heading {
+  font-size: 22px;
+  color: #4c1d95; /* purple accent */
+  margin: 0 0 12px;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* song list */
+.song-list {
+  display: block;
+  gap: 10px;
+}
+
+/* single song card */
+.song-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eef0f3;
+  box-shadow: 0 4px 8px rgba(15,15,15,0.03);
+  margin-bottom: 12px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.song-title {
+  font-weight: 700;
+  color: #111827;
+}
+.song-artist {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* control button */
+.control-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #4c1d95;
+  padding: 6px;
+  border-radius: 50%;
+}
+.control-btn:hover {
+  background: rgba(76,29,149,0.06);
+}
+
+/* dark mode alternative (if using dark toggler)
+   uses neon green theme */
+.mood-songs.dark .song-card {
+  background: #111;
+  border: 1px solid rgba(57,255,20,0.12);
+  box-shadow: none;
+}
+.mood-songs.dark .song-title { color: #39ff14; }
+.mood-songs.dark .song-artist { color: #9ca3af; }
+.mood-songs.dark .control-btn { color: #39ff14; }
+
+/* Controls */
+.song-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+/* Play button */
+.play-btn {
+  color: #4c1d95; /* purple accent */
+}
+.play-btn:hover {
+  background: rgba(76, 29, 149, 0.08);
+  transform: scale(1.15);
+}
+
+/* Pause button */
+.pause-btn {
+  color: #9333ea; /* slightly different purple */
+}
+.pause-btn:hover {
+  background: rgba(147, 51, 234, 0.08);
+  transform: scale(1.15);
+}
+
+/* Dark mode adjustments */
+.mood-songs.dark .play-btn,
+.mood-songs.dark .pause-btn {
+  color: #39ff14;
+}
+.mood-songs.dark .play-btn:hover,
+.mood-songs.dark .pause-btn:hover {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+.song-card.playing {
+  border: 2px solid #39ff14;
+  background: rgba(57, 255, 20, 0.05);
+}
+
