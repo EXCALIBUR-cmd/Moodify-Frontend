@@ -1,7 +1,7 @@
 // App.jsx (example)
 import React, { useState } from "react";
 import FacialExpression from "./components/FacialExpression";
-import MoodSongs from "./components/MoodSongs";
+import MoodSongs from "./components/moodSongs";
 
 function App() {
    const [Songs, setSongs] = useState([

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./MoodSongs.css";
-
+import "./moodSongs.css";
 const MoodSongs = ({ darkMode, songs = [] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentSong, setCurrentSong] = useState(null);
